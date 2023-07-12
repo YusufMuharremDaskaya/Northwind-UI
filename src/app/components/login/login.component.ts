@@ -35,10 +35,6 @@ export class LoginComponent implements OnInit {
            this.toastr.info("Giriş Başarılı")
            localStorage.setItem("token", result.data.token)
       },
-        error: errorResult => {
-          this.toastr.error(errorResult.error)
-        }
-    
     })
     }
     

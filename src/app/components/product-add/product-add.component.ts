@@ -49,19 +49,7 @@ export class ProductAddComponent implements OnInit {
           return
         }
         this.toastr.success(result.message, "Ürün eklendi")
-      }, 
-      
-      error: (responseError)=> {
-        console.log(responseError)
-        let errors: any[] = responseError.error.Errors
-        if(errors){
-        errors.forEach(element => {
-          this.toastr.error(element.ErrorMessage, "Hata")
-        });
-      }else{
-          this.toastr.error((responseError.error.Message as string).replace(/(.{50})..+/, "..."), "Hata")
-      }
-    }})
+      }})
   }
 
   getCategories(){
